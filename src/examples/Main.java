@@ -1,5 +1,7 @@
 package examples;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         UserService userService = new UserService();
@@ -12,6 +14,24 @@ public class Main {
         if (foundUser != null) {
             System.out.println("User found:");
             foundUser.showSummary();
+        } else {
+            System.out.println("User not found.");
+        }
+
+        ArrayList<SystemUser> users = new ArrayList<>();
+
+        int targetId = 3;
+        SystemUser foundUser2 = null;
+
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).getId() == targetId) {
+                foundUser2 = users.get(i);
+                break;
+            }
+        }
+
+        if (foundUser2 != null) {
+            foundUser2.showSummary();
         } else {
             System.out.println("User not found.");
         }
