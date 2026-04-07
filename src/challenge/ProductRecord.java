@@ -41,7 +41,7 @@ public class ProductRecord {
 
     public void showProductSummary() {
         System.out.printf(
-            "Id: %d | Name: %s | Price: $%.2f | Available: %b",
+            "Id: %d | Name: %s | Price: $%.2f | Available: %b%n",
             id, name, price, available
         );
     }
